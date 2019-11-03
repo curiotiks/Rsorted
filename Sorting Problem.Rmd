@@ -1,0 +1,79 @@
+---
+title: "Sorting Problem"
+output: html_notebook
+---
+
+Problem: Create an algorithm to check if an array of natural numbers is sorted in either ascending or decending order.
+
+
+AscendingFunction (array)
+  For {each} in {array}:
+    If {each} - {next item} <= 0
+    Return 
+
+DescendingFunction (array)
+  For {each} in {array}
+    If {each} - {next item} => 0
+    
+First, I need to figure out how to reference the next item in the sequence
+```{r}
+##Testing for loop for referencing {next item}
+
+seq <- c(2, 104, 6, 9)
+print (seq[1+1]) #moves me up in the array
+print(seq[1] + seq[2]) #Combines two objects in the array 
+
+list <- (1:100)
+for (i in list){
+  if (list[i] < list[101]){
+    print (i)
+  }
+}
+```
+
+Now we're putting together the ascending loop
+    
+```{r}
+##Defining the array
+nsorted <- c(5, 6, 7, 9, 2, 10, 14, 19, 20)
+ysorted <- c(5, 6, 7, 8, 11, 14, 19, 20, 40)
+
+arr <- ysorted
+
+##ASCENDING
+##Loop check if each value, when subtracted from itself+1 is still greater than or equal zero
+
+notch <- 0
+for (i in arr){
+  if (notch < length(arr)){
+    if (arr[i] < arr[i+1]){
+      print ("Good")
+      notch <- notch + 1
+    }else {
+      print ("Bad")
+      notch <- notch + 1
+    }
+  }
+}
+```
+
+Still having problems with the above script, which is the goal. But maybe creating it with a while loop would be more efficient
+
+```{r}
+##Trying again with while loop instead of For loop.
+
+counter <- 0 
+while (counter < length(arr)) {
+  for (i in arr){
+    if (arr[i] < arr[i+1]){
+      print ("Good")
+      counter <- counter + 1
+      print (counter)
+    }else {
+      print ("Bad")
+      counter <- length(arr)
+    }
+  }
+}
+```
+
