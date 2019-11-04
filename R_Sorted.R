@@ -1,10 +1,11 @@
 ##A set of functions for checking if an array of positive real numbers are sorting and in which direction. 
 
-##Creating an array for testing
+##Creating arrays for testing
 
 aset <- c(5, 6, 7, 7, 7, 7, 8, 10, 20, 50, 89, 200)
 dset <- c(1100, 40, 23, 13, 10, 9.2342, 5, 1)
 sset <- c(2, 2, 2, 2, 2, 2)
+
 ##ASCENDING: The function first checks to see if the index on which it's on is
 ##the last by comparing the index with the length. If it is not, then it
 ##compares the value of the index with the next to see if it is smaller. Every
