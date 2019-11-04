@@ -7,8 +7,8 @@ dset <- c(1100, 40, 23, 13, 10, 9.2342, 5, 1)
 sset <- c(2, 2, 2, 2, 2, 2)
 
 dissorted <- function (arr, dir) {
-  ##Ascending function
   
+##Ascending function
   isasc <- function(arr) {
     check <- 0 ##Check value
     for (i in seq_along(arr)) {
@@ -29,8 +29,7 @@ dissorted <- function (arr, dir) {
     }
   }
   
-  ##Descending Function
-  
+##Descending Function
   isdsc <- function(arr) {
     check <- 0
     for (i in seq_along(arr)) {
@@ -53,7 +52,7 @@ dissorted <- function (arr, dir) {
     }
   }
   
-  ##Final check with all functions
+##Final check with all functions
   if (dir == "a") {
     isasc(arr)
     
@@ -62,4 +61,5 @@ dissorted <- function (arr, dir) {
   }
 }
 
-dissorted (aset, dir = "a")
+dissorted (dset, dir = "a")
+
