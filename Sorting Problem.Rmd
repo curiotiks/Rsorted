@@ -2,6 +2,7 @@
 title: "Sorting Problem"
 output: html_notebook
 ---
+TESTING FIRST GIT COMMIT
 
 Problem: Create an algorithm to check if an array of natural numbers is sorted in either ascending or decending order.
 
