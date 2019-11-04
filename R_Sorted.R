@@ -31,9 +31,6 @@ isasc <- function(arr) {
   }
 }
 
-##TESTING
-isasc(aset)
-
 ##DESCENDING: Ideally, if I copy the above script and switch some signs, it should work. 
 
 isdsc <- function(arr) {
@@ -55,9 +52,6 @@ isdsc <- function(arr) {
     return (FALSE)
   }
 }
-
-##TESTING
-isdsc(dset)
 
 ##Combining them into a single function --> dissorted (arr, a or d)
 
